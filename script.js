@@ -153,8 +153,8 @@
       var linkPath = link.getAttribute('href');
       if (!linkPath) continue;
 
-      var normalizedLinkPath = linkPath.replace(//$/, '');
-      var normalizedCurrentPath = currentPath.replace(//$/, '');
+      var normalizedLinkPath = linkPath.replace(/\/$/, '');
+      var normalizedCurrentPath = currentPath.replace(/\/$/, '');
 
       if (normalizedLinkPath === normalizedCurrentPath ||
           (normalizedCurrentPath === '' && normalizedLinkPath === '/index.html') ||
@@ -394,7 +394,7 @@
           var emailValue = emailField.value.trim();
           if (emailValue === '') {
             showError(emailField, 'Bitte geben Sie Ihre E-Mail-Adresse ein.');
-          } else if (!/^[^s@]+@[^s@]+.[^s@]+$/.test(emailValue)) {
+          } else if (!/^[^s@]+@[^s@]+\.[^s@]+$/.test(emailValue)) {
             showError(emailField, 'Bitte geben Sie eine gültige E-Mail-Adresse ein.');
           }
         }
@@ -403,7 +403,7 @@
           var phoneValue = phoneField.value.trim();
           if (phoneValue === '') {
             showError(phoneField, 'Bitte geben Sie Ihre Telefonnummer ein.');
-          } else if (!/^[ds+-()]{10,20}$/.test(phoneValue)) {
+          } else if (!/^[\ds+\-()]{10,20}$/.test(phoneValue)) {
             showError(phoneField, 'Bitte geben Sie eine gültige Telefonnummer ein.');
           }
         }

@@ -2,31 +2,32 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+</head>
  <body>
-  <header class="l-header">
-   <div class="container">
-    <nav class="c-nav" role="navigation" aria-label="Hauptnavigation">
-     <div class="c-nav__container">
-      <a href="/" class="c-nav__brand" aria-label="AutoKraft Startseite"> 
-       <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect width="150" height="40" rx="4" fill="#1a1a1a"></rect> <text x="75" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f5f5f5" text-anchor="middle">AutoKraft</text>
-       </svg> 
-      </a>
-      <button type="button" class="c-nav__toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Menü öffnen"><span class="c-nav__toggle-bar"></span> <span class="c-nav__toggle-bar"></span> <span class="c-nav__toggle-bar"></span></button>
-      <div id="nav-menu" class="c-nav__menu">
-       <ul class="c-nav__list">
-        <li class="c-nav__item"><a href="/" class="c-nav__link" aria-current="page">Startseite</a></li>
-        <li class="c-nav__item"><a href="about.html" class="c-nav__link">Über uns</a></li>
-        <li class="c-nav__item"><a href="services.html" class="c-nav__link">Leistungen</a></li>
-        <li class="c-nav__item"><a href="contact.html" class="c-nav__link">Kontakt</a></li>
-       </ul>
-       <a href="contact.html" class="c-button c-button--primary c-nav__cta">Jetzt anfragen</a>
-      </div>
-     </div>
+  <header class="dr-header" aria-label="Main site header">
+  <div class="dr-header-inner">
+    <div class="dr-header-brand">
+      <div class="dr-header-logo" aria-label="AutoKraft logo">AutoKraft</div>
+    </div>
+    <button class="dr-header-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="dr-header-toggle-bar"></span>
+      <span class="dr-header-toggle-bar"></span>
+    </button>
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./gdpr-rights.html">Gdpr rights</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./impressum.html">Impressum</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
     </nav>
-   </div>
-  </header>
+  </div>
+</header>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width," initial-scale="1.0">
   <meta name="description" content="Datenschutzerklärung" von="" autotech="" solutions.="" erfahren="" sie,="" wie="" wir="" ihre="" persönlichen="" daten="" sammeln,="" verwenden="" und="" schützen.\_="">
@@ -303,48 +304,56 @@
   <script type="application/ld+json">    {      \"@context\": \"https://schema.org\",      \"@type\": \"Organization\",      \"name\": \"AutoTech Solutions\",      \"url\": \"https://domain.com\",      \"logo\": \"https://domain.com/logo.svg\",      \"description\": \"Innovative Automobiltechnologie-Lösungen für die Zukunft der Mobilität\",      \"address\": {        \"@type\": \"PostalAddress\",        \"streetAddress\": \"Berliner Allee 47\",        \"addressLocality\": \"Berlin\",        \"postalCode\": \"10115\",        \"addressCountry\": \"DE\"      },      \"contactPoint\": {        \"@type\": \"ContactPoint\",        \"telephone\": \"+49-30-1234-5678\",        \"contactType\": \"Kundenservice\",        \"email\": \"info@domain.com\",        \"availableLanguage\": \"de\"      },      \"sameAs\": [        \"https://domain.com\"      ]    }    </script>
   <script type="application/ld+json">    {      \"@context\": \"https://schema.org\",      \"@type\": \"WebPage\",      \"name\": \"Datenschutzerklärung\",      \"description\": \"Datenschutzerklärung von AutoTech Solutions. Erfahren Sie, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.\",      \"url\": \"https://domain.com/privacy.html\",      \"inLanguage\": \"de\",      \"isPartOf\": {        \"@type\": \"WebSite\",        \"name\": \"AutoTech Solutions\",        \"url\": \"https://domain.com\"      }    }    </script>
   "
-  <footer class="l-footer" role="contentinfo">
-   <div class="container">
-    <div class="row">
-     <div class="col-12 col-md-4 mb-4 mb-md-0">
-      <h3 class="l-footer__title">AutoKraft</h3>
-      <p class="l-footer__text">Ihr vertrauenswürdiger Partner für professionellen Autoservice in Deutschland.</p>
-      <div class="l-footer__contact">
-       <p><strong>Hauptstraße 47</strong>
-        <br>
-        80331 München
-        <br>
-        Deutschland</p>
-       <p><a href="tel:+498912345678" class="l-footer__link">+49 89 12345678</a></p>
-       <p><a href="mailto:info@domain.com" class="l-footer__link">info@domain.com</a></p>
+  <footer class="dr-footer" aria-label="Site footer">
+  <div class="dr-footer-inner">
+    <section class="dr-footer-main" aria-label="Footer navigation">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="domain logo">domain</div>
+        <p class="dr-footer-tagline">Premium solutions and services provided via domain.com.</p>
       </div>
-     </div>
-     <div class="col-12 col-md-4 mb-4 mb-md-0">
-      <h3 class="l-footer__title">Navigation</h3>
-      <ul class="l-footer__list">
-       <li class="l-footer__item"><a href="/" class="l-footer__link">Startseite</a></li>
-       <li class="l-footer__item"><a href="about.html" class="l-footer__link">Über uns</a></li>
-       <li class="l-footer__item"><a href="services.html" class="l-footer__link">Leistungen</a></li>
-       <li class="l-footer__item"><a href="contact.html" class="l-footer__link">Kontakt</a></li>
-      </ul>
-     </div>
-     <div class="col-12 col-md-4">
-      <h3 class="l-footer__title">Rechtliches</h3>
-      <ul class="l-footer__list">
-       <li class="l-footer__item"><a href="privacy.html" class="l-footer__link">Datenschutzerklärung</a></li>
-       <li class="l-footer__item"><a href="terms_and_conditions.html" class="l-footer__link">Allgemeine Geschäftsbedingungen</a></li>
-       <li class="l-footer__item"><a href="terms_of_services.html" class="l-footer__link">Nutzungsbedingungen</a></li>
-       <li class="l-footer__item"><a href="cookie_policy.html" class="l-footer__link">Cookie-Richtlinie</a></li>
-       <li class="l-footer__item"><a href="gdpr-rights.html" class="l-footer__link">DSGVO-Rechte</a></li>
-       <li class="l-footer__item"><a href="impressum.html" class="l-footer__link">Impressum</a></li>
-      </ul>
-     </div>
-    </div>
-    <div class="l-footer__bottom">
-     <p class="l-footer__copyright">© 2025 AutoKraft. Alle Rechte vorbehalten.</p>
-    </div>
-   </div>
-  </footer>
+      <div class="dr-footer-links-wrap">
+        <div class="dr-footer-column" aria-label="Main navigation">
+          <h3 class="dr-footer-heading">Navigate</h3>
+          <ul class="dr-footer-nav-list">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./gdpr-rights.html">Gdpr rights</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./impressum.html">Impressum</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="dr-footer-column" aria-label="Legal navigation">
+          <h3 class="dr-footer-heading">Legal</h3>
+          <ul class="dr-footer-legal-list">
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./impressum.html">Impressum</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms.html">Terms</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms And Conditions</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms Of Services</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="dr-footer-meta" aria-label="Disclaimer and copyright">
+      <p class="dr-footer-disclaimer">The information provided on domain.com is for general informational purposes only and does not constitute professional, legal, financial, or technical advice. domain does not guarantee the completeness, reliability, or accuracy of any content and shall not be liable for any loss or damage arising from the use of, or reliance on, information made available via domain.com. Users remain solely responsible for evaluating the suitability and risks of any decisions made based on content or services provided by domain.</p>
+      <div class="dr-footer-bottom-row">
+        <p class="dr-footer-copy">© <span class="dr-footer-copy-year">2024</span> domain. All rights reserved.</p>
+      </div>
+    </section>
+  </div>
+</footer>
   <script src="script.js" defer=""></script>
  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
+<script src="./consent.js"></script>
 </body></html>

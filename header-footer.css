@@ -1,0 +1,290 @@
+.dr-header {
+  background: var(--color-primary-dark);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.dr-header-inner {
+  max-width: var(--container-max-w);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  min-height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--space-xl);
+}
+
+.dr-header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.dr-header-logo {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-primary);
+}
+
+.dr-nav {
+  display: flex;
+}
+
+.dr-nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dr-nav-link {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  padding: 0.35rem 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.dr-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.dr-nav-link:hover,
+.dr-nav-link:focus-visible {
+  color: var(--color-light);
+}
+
+.dr-nav-link:hover::after,
+.dr-nav-link:focus-visible::after {
+  width: 100%;
+}
+
+.dr-header-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.dr-header-toggle:hover,
+.dr-header-toggle:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.dr-header-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-light);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.dr-header-toggle-bar + .dr-header-toggle-bar {
+  margin-top: 4px;
+}
+
+.dr-header-nav-open .dr-header-toggle-bar:first-child {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.dr-header-nav-open .dr-header-toggle-bar:last-child {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.dr-header-nav-open .dr-nav {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .dr-header-inner {
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+  }
+
+  .dr-nav {
+    display: none;
+    width: 100%;
+  }
+
+  .dr-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: var(--space-sm);
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+  }
+
+  .dr-header-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .dr-header-nav-open .dr-nav {
+    display: flex;
+  }
+}
+
+.dr-footer {
+  background: var(--color-neutral-900);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+.dr-footer-inner {
+  max-width: var(--container-max-w);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--container-padding) var(--space-xl);
+}
+
+.dr-footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-xl);
+  column-gap: var(--space-2xl);
+  align-items: flex-start;
+}
+
+.dr-footer-brand-block {
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.dr-footer-logo {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-neutral-800);
+  color: var(--color-light);
+}
+
+.dr-footer-tagline {
+  margin: var(--space-md) 0 0;
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  line-height: var(--line-height-base);
+}
+
+.dr-footer-links-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-lg);
+  column-gap: var(--space-2xl);
+}
+
+.dr-footer-column {
+  min-width: 150px;
+}
+
+.dr-footer-heading {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-light);
+}
+
+.dr-footer-nav-list,
+.dr-footer-legal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dr-footer-nav-item + .dr-footer-nav-item,
+.dr-footer-legal-item + .dr-footer-legal-item {
+  margin-top: 0.4rem;
+}
+
+.dr-footer-nav-link,
+.dr-footer-legal-link {
+  font-family: var(--font-secondary);
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.dr-footer-nav-link:hover,
+.dr-footer-nav-link:focus-visible,
+.dr-footer-legal-link:hover,
+.dr-footer-legal-link:focus-visible {
+  color: var(--color-light);
+}
+
+.dr-footer-meta {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.dr-footer-disclaimer {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+  line-height: var(--line-height-base);
+}
+
+.dr-footer-bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-sm);
+  column-gap: var(--space-lg);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dr-footer-copy {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .dr-footer-inner {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .dr-footer-main {
+    flex-direction: column;
+  }
+
+  .dr-footer-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

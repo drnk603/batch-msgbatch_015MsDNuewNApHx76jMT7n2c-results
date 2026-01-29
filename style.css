@@ -1868,7 +1868,7 @@ strong {
 }
 
 .g-4 {
-  gap: var(--space-lg);
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1905,5 +1905,11 @@ strong {
   .c-nav__toggle,
   .l-footer {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .g-4 {
+    gap: var(--space-lg);
   }
 }
